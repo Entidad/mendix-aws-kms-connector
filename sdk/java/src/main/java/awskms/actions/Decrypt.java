@@ -14,11 +14,12 @@ public class Decrypt {
             String accessKey,
             String secretKey,
             String region,
+            String keyId,
             String ciphertextBlob) {
         
         KmsConnectorService kmsService = new KmsConnectorService(accessKey, secretKey, region);
         try {
-            DecryptRequest request = new DecryptRequest(ciphertextBlob);
+            DecryptRequest request = new DecryptRequest(keyId, ciphertextBlob);
             DecryptResponse response = kmsService.decrypt(request);
             return response;
         } finally {

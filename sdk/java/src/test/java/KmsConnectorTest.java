@@ -16,7 +16,7 @@ public class KmsConnectorTest {
     // Sample AWS credentials and key (replace with actual values)
     private static final String AWS_ACCESS_KEY = "AKIA...";
     private static final String AWS_SECRET_KEY = "...";
-    private static final String AWS_REGION = "us-east-1";
+    private static final String AWS_REGION = "us-west-1";
 
     public static void main(String[] args) {
         System.out.println("=== AWS KMS Connector Module Test ===\n");
@@ -52,7 +52,8 @@ public class KmsConnectorTest {
                 AWS_SECRET_KEY,
                 AWS_REGION,
                 "Test Encryption Key",
-                "ENCRYPT_DECRYPT"
+                "ENCRYPT_DECRYPT",
+                "SYMMETRIC_DEFAULT"
         );
 
         if (response.isSuccess()) {
@@ -99,6 +100,7 @@ public class KmsConnectorTest {
                 AWS_ACCESS_KEY,
                 AWS_SECRET_KEY,
                 AWS_REGION,
+                keyId,
                 encryptResponse.getCiphertextBlob()
         );
 

@@ -4,8 +4,8 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>entidad.io.awskms</groupId>
-    <artifactId>awskms-connector</artifactId>
+    <groupId>entidad.io.aws</groupId>
+    <artifactId>aws-kms-client-java</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
@@ -16,7 +16,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <aws-java-sdk.version>2.25.0</aws-java-sdk.version>
+        <aws-java-sdk.version>2.42.14</aws-java-sdk.version>
     </properties>
 
     <dependencies>

@@ -48,6 +48,7 @@ public class KmsConnectorService {
             software.amazon.awssdk.services.kms.model.CreateKeyRequest awsRequest = 
                     software.amazon.awssdk.services.kms.model.CreateKeyRequest.builder()
                     .description(request.getDescription())
+                    .keySpec(request.getKeySpec())
                     .keyUsage(request.getKeyUsage())
                     .build();
 
@@ -115,6 +116,7 @@ public class KmsConnectorService {
             software.amazon.awssdk.services.kms.model.DecryptRequest awsRequest = 
                     software.amazon.awssdk.services.kms.model.DecryptRequest.builder()
                     .ciphertextBlob(SdkBytes.fromByteArray(ciphertextBytes))
+                    .keyId(request.getKeyId())
                     .build();
 
             software.amazon.awssdk.services.kms.model.DecryptResponse awsResponse = 
@@ -148,7 +150,7 @@ public class KmsConnectorService {
             software.amazon.awssdk.services.kms.model.GenerateDataKeyRequest awsRequest = 
                     software.amazon.awssdk.services.kms.model.GenerateDataKeyRequest.builder()
                     .keyId(request.getKeyId())
-                    .keySpec(keySpec)
+                    .keySpec(request.getKeySpec())
                     .build();
 
             software.amazon.awssdk.services.kms.model.GenerateDataKeyResponse awsResponse = 

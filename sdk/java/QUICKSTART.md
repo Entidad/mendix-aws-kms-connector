@@ -5,9 +5,9 @@
 ### Step 1: Build the Module (2 minutes)
 
 ```bash
-cd awskms
+cd sdk/java/
 export MAVEN_HOME="$HOME/maven/apache-maven-3.9.6" && "$MAVEN_HOME/bin/mvn" clean install -DskipTests
-```
+``
 
 **Expected Output:**
 ```
@@ -34,7 +34,7 @@ Then restart Mendix Studio Pro.
    Internal Variables:
    - $AccessKey = "YOUR_AWS_ACCESS_KEY"
    - $SecretKey = "YOUR_AWS_SECRET_KEY"  
-   - $Region = "us-east-1"
+   - $Region = "us-west-1"
    - $KeyId = "arn:aws:kms:us-east-1:ACCOUNT:key/..."
    - $PlainText = "Hello KMS World"
 

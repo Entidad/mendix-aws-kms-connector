@@ -15,11 +15,12 @@ public class CreateKey {
             String secretKey,
             String region,
             String description,
-            String keyUsage) {
+            String keyUsage,
+            String keySpec) {
         
         KmsConnectorService kmsService = new KmsConnectorService(accessKey, secretKey, region);
         try {
-            CreateKeyRequest request = new CreateKeyRequest(description, keyUsage);
+            CreateKeyRequest request = new CreateKeyRequest(description, keyUsage, keySpec);
             CreateKeyResponse response = kmsService.createKey(request);
             return response;
         } finally {
