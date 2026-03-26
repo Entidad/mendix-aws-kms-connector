@@ -303,16 +303,6 @@ public final class Microflows
 	{
 		nAV_KMS_CredentialsBuilder().execute(context);
 	}
-	public static com.mendix.core.actionmanagement.MicroflowCallBuilder nAV_KMS_Manager_DemoBuilder()
-	{
-		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("AWSKMSConnector.NAV_KMS_Manager_Demo");
-		return builder;
-	}
-
-	public static void nAV_KMS_Manager_Demo(IContext context)
-	{
-		nAV_KMS_Manager_DemoBuilder().execute(context);
-	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder vAL_KMSCredentialHelperBuilder(
 		awskmsconnector.proxies.KMSCredentialHelper _kMSCredentialHelper
 	)
