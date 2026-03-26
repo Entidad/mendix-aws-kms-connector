@@ -158,7 +158,7 @@ const region$Main = (historyId) => (<PageFragment renderKey={historyId}>{[
                                                 $widgetId="p.AWSKMSConnector.README.text12"
                                                 class={"mx-name-text12"}
                                                 caption={ExpressionProperty({
-                                                    "expression": { "expr": { "type": "literal", "value": "• aws-kms-client-java-1.0.0.jar (Custom Java dependency)\r\n• Encryption" }, "args": {} }
+                                                    "expression": { "expr": { "type": "literal", "value": "• aws-kms-client-java-1.0.0.jar (Custom Java dependency)\r\n• AWSAuthentication\r\n• Encryption" }, "args": {} }
                                                 })}
                                                 renderMode={"span"} />
                                         ]}

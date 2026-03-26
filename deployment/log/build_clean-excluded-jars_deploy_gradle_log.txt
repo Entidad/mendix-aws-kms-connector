@@ -1,8 +1,8 @@
 Initialized native services in: C:\Users\jorge\.gradle\native
 Initialized jansi services in: C:\Users\jorge\.gradle\native
 Received JVM installation metadata from 'C:\Program Files\Eclipse Adoptium\jdk-21.0.5.11-hotspot': {JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-21.0.5.11-hotspot, JAVA_VERSION=21.0.5, JAVA_VENDOR=Eclipse Adoptium, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=21.0.5+11-LTS, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=21.0.5+11-LTS, VM_VENDOR=Eclipse Adoptium, OS_ARCH=aarch64}
-The client will now receive all logging from the daemon (pid: 9084). The daemon log file: C:\Users\jorge\.gradle\daemon\8.5\daemon-9084.out.log
-Starting 16th build in daemon [uptime: 46 mins 18.735 secs, performance: 94%, GC rate: 0.00/s, heap usage: 2% of 512 MiB, non-heap usage: 21% of 384 MiB]
+The client will now receive all logging from the daemon (pid: 8248). The daemon log file: C:\Users\jorge\.gradle\daemon\8.5\daemon-8248.out.log
+Starting 5th build in daemon [uptime: 2 hrs 9 mins 48.422 secs, performance: 95%, GC rate: 0.00/s, heap usage: 1% of 512 MiB, non-heap usage: 24% of 384 MiB]
 Using 6 worker leases.
 Watching the file system is configured to be enabled if available
 File system watching is inactive
@@ -20,49 +20,60 @@ Selected primary task 'clean-excluded-jars' from project :
 Selected primary task 'deploy' from project :
 Tasks to be executed: [task ':clean-excluded-jars', task ':copyDeploymentArtifacts', task ':copyLibs', task ':copyResources', task ':unzipDataSnapshot', task ':deploy']
 Tasks that were excluded: []
-Resolve mutations for :clean-excluded-jars (Thread[#507,Execution worker,5,main]) started.
-:clean-excluded-jars (Thread[#507,Execution worker,5,main]) started.
-destroyer locations for task group 0 (Thread[#506,included builds,5,main]) started.
+Resolve mutations for :clean-excluded-jars (Thread[#207,Execution worker,5,main]) started.
+:clean-excluded-jars (Thread[#206,included builds,5,main]) started.
+destroyer locations for task group 0 (Thread[#207,Execution worker,5,main]) started.
 
 > Task :clean-excluded-jars UP-TO-DATE
 Caching disabled for task ':clean-excluded-jars' because:
   Build cache is disabled
 Task ':clean-excluded-jars' is not up-to-date because:
   Task has not declared any outputs despite executing actions.
-Resolve mutations for :copyDeploymentArtifacts (Thread[#507,Execution worker,5,main]) started.
-:copyDeploymentArtifacts (Thread[#507,Execution worker,5,main]) started.
+Resolve mutations for :copyDeploymentArtifacts (Thread[#207,Execution worker,5,main]) started.
+:copyDeploymentArtifacts (Thread[#206,included builds,5,main]) started.
 
 > Task :copyDeploymentArtifacts
 Caching disabled for task ':copyDeploymentArtifacts' because:
   Build cache is disabled
 Task ':copyDeploymentArtifacts' is not up-to-date because:
   Task has not declared any outputs despite executing actions.
-Resolve mutations for :copyLibs (Thread[#506,included builds,5,main]) started.
-:copyLibs (Thread[#506,included builds,5,main]) started.
+Resolve mutations for :copyLibs (Thread[#206,included builds,5,main]) started.
+:copyLibs (Thread[#206,included builds,5,main]) started.
 
-> Task :copyLibs UP-TO-DATE
+> Task :copyLibs
 Caching disabled for task ':copyLibs' because:
   Build cache is disabled
-Skipping task ':copyLibs' as it is up-to-date.
-Resolve mutations for :copyResources (Thread[#506,included builds,5,main]) started.
-:copyResources (Thread[#506,included builds,5,main]) started.
+Task ':copyLibs' is not up-to-date because:
+  Input property 'rootSpec$1' file C:\Users\jorge\Documents\Workspaces\Claude-ws\mendix-aws-kms-connector\vendorlib\annotations-2.42.15.jar has been removed.
+  Input property 'rootSpec$1' file C:\Users\jorge\Documents\Workspaces\Claude-ws\mendix-aws-kms-connector\vendorlib\apache-client-2.42.14.jar has been removed.
+  Input property 'rootSpec$1' file C:\Users\jorge\Documents\Workspaces\Claude-ws\mendix-aws-kms-connector\vendorlib\arns-2.42.15.jar has been removed.
+Resolve mutations for :copyResources (Thread[#206,included builds,5,main]) started.
+:copyResources (Thread[#206,included builds,5,main]) started.
 
-> Task :copyResources UP-TO-DATE
+> Task :copyResources
 Caching disabled for task ':copyResources' because:
   Build cache is disabled
-Skipping task ':copyResources' as it is up-to-date.
-Resolve mutations for :unzipDataSnapshot (Thread[#506,included builds,5,main]) started.
-:unzipDataSnapshot (Thread[#506,included builds,5,main]) started.
+Task ':copyResources' is not up-to-date because:
+  Input property 'rootSpec$1' file C:\Users\jorge\Documents\Workspaces\Claude-ws\mendix-aws-kms-connector\resources\templates\README.md has changed.
+Resolve mutations for :unzipDataSnapshot (Thread[#207,Execution worker,5,main]) started.
+:unzipDataSnapshot (Thread[#207,Execution worker,5,main]) started.
 
 > Task :unzipDataSnapshot SKIPPED
 Skipping task ':unzipDataSnapshot' as task onlyIf 'Task is enabled' is false.
-Resolve mutations for :deploy (Thread[#506,included builds,5,main]) started.
-:deploy (Thread[#506,included builds,5,main]) started.
+Resolve mutations for :deploy (Thread[#207,Execution worker,5,main]) started.
+:deploy (Thread[#207,Execution worker,5,main]) started.
 
 > Task :deploy
 Skipping task ':deploy' as it has no actions.
 
-BUILD SUCCESSFUL in 1s
-4 actionable tasks: 1 executed, 3 up-to-date
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 3 executed, 1 up-to-date
+VCS Checkout Cache (C:\Users\jorge\Documents\Workspaces\Claude-ws\mendix-aws-kms-connector\deployment\.gradle\vcs-1) removing files not accessed on or after Wed Mar 18 09:55:07 PDT 2026.
+VCS Checkout Cache (C:\Users\jorge\Documents\Workspaces\Claude-ws\mendix-aws-kms-connector\deployment\.gradle\vcs-1) cleanup deleted 0 files/directories.
+VCS Checkout Cache (C:\Users\jorge\Documents\Workspaces\Claude-ws\mendix-aws-kms-connector\deployment\.gradle\vcs-1) cleaned up in 0.004 secs.
+dependencies-accessors (C:\Users\jorge\Documents\Workspaces\Claude-ws\mendix-aws-kms-connector\deployment\.gradle\8.5\dependencies-accessors) removing files not accessed on or after Wed Mar 18 09:55:06 PDT 2026.
+dependencies-accessors (C:\Users\jorge\Documents\Workspaces\Claude-ws\mendix-aws-kms-connector\deployment\.gradle\8.5\dependencies-accessors) cleanup deleted 0 files/directories.
+dependencies-accessors (C:\Users\jorge\Documents\Workspaces\Claude-ws\mendix-aws-kms-connector\deployment\.gradle\8.5\dependencies-accessors) cleaned up in 0.001 secs.
+
 
 

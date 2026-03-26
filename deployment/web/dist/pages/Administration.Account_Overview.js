@@ -1,30 +1,30 @@
-import { asProperty, fromConstant$, ensureAssociationId, registerAssociationType, registerFilterAttribute, getSession, getFocus, getHTMLElement, ensure, isNavigableElement, isHTMLElement, reactExports, newId, Big, useForceUpdate, tuple, repeat, reaction, useStoreBackendValue, readUntracked, jsxRuntimeExports, classNames, NestedStoreProvider, asPluginWidgets, selectTranslation } from '../index-FQlVOlYf.js';
-import { PageFragment, ExpressionProperty } from '../Placeholder-DFcDqEIU.js';
-import { computeAction, ActionButton, TextProperty, ActionProperty } from '../ActionButton-dEkVZjqk.js';
-import { listItemProperty, DatabaseObjectListProperty, ListAttributeProperty } from '../ListAttributeProperty-CXLDrwR-.js';
-import '../DerivedUniqueIdProperty-CMoZmJLZ.js';
-import { ListExpressionProperty } from '../ListExpressionProperty-BbPebQYY.js';
-import { DatagridDateFilterWidgetModule, DatagridTextFilterWidgetModule, TemplatedWidgetProperty } from '../DatagridTextFilter-CAhJ0TCr.js';
-import { WebIconProperty } from '../WebIconProperty-znHzcziz.js';
-import { ConditionalVisibilityWrapper } from '../ConditionalVisibilityWrapper--KfmbLq-.js';
-import { Container } from '../Image-C3uz38Dk.js';
-import { DatagridWidgetModule } from '../Datagrid-D4O9fyfS.js';
-import { DatagridDropdownFilterWidgetModule } from '../DatagridDropdownFilter-DdIkciE-.js';
-import { Div } from '../Div-o8iece77.js';
-import { useLegacyResize, getBox } from '../DataView-Dip00PtH.js';
-import { usePersistentState } from '../CJS8msnl-qQy3fsQc.js';
-import { Text } from '../Text-DuQAvxSA.js';
-import { content as content$1 } from '../Atlas_Core.Atlas_Default-Cr51Glyx.js';
-import '../index-D_nCuE-Y.js';
-import '../ScrollContainer-_UwHUp6v.js';
-import '../InlineText-BmGDgYXy.js';
-import '../AssociationProperty-WAySTpZ7.js';
-import '../Atlas_Core.OCH_UpdateUserLanguage-CYtkbF7W.js';
-import '../index-fpKsB4fe.js';
-import '../FormGroup-D4kp91rN.js';
-import '../WebStaticImageProperty-BHhgotvB.js';
-import '../Combobox-CTuBdCKm.js';
-import '../Fragment-686zUVRb.js';
+import { asProperty, fromConstant$, ensureAssociationId, registerAssociationType, registerFilterAttribute, getSession, getFocus, getHTMLElement, ensure, isNavigableElement, isHTMLElement, reactExports, newId, Big, useForceUpdate, tuple, repeat, reaction, useStoreBackendValue, readUntracked, jsxRuntimeExports, classNames, NestedStoreProvider, asPluginWidgets, selectTranslation } from '../index-Zvs2JQW8.js';
+import { PageFragment, ExpressionProperty } from '../Placeholder-Bmj-Y64R.js';
+import { computeAction, ActionButton, TextProperty, ActionProperty } from '../ActionButton-N00bQbXV.js';
+import { listItemProperty, DatabaseObjectListProperty, ListAttributeProperty } from '../ListAttributeProperty--Cc-W_Q0.js';
+import '../DerivedUniqueIdProperty-BRq0bBYj.js';
+import { ListExpressionProperty } from '../ListExpressionProperty-ynAFxGRH.js';
+import { DatagridDateFilterWidgetModule, DatagridTextFilterWidgetModule, TemplatedWidgetProperty } from '../DatagridTextFilter-Btr3SWv-.js';
+import { WebIconProperty } from '../WebIconProperty-CknoYWS-.js';
+import { ConditionalVisibilityWrapper } from '../ConditionalVisibilityWrapper-CWN6xH5D.js';
+import { Container } from '../Image-DjJe8vjt.js';
+import { DatagridWidgetModule } from '../Datagrid-su1MCSNT.js';
+import { DatagridDropdownFilterWidgetModule } from '../DatagridDropdownFilter-sfY6e_c5.js';
+import { Div } from '../Div-CljrUJND.js';
+import { useLegacyResize, getBox } from '../DataView-BVzZhbt7.js';
+import { usePersistentState } from '../CJS8msnl-D5R4ffv1.js';
+import { Text } from '../Text-CVL0TijG.js';
+import { content as content$1 } from '../Atlas_Core.Atlas_Default-kftgGv_S.js';
+import '../index-CRhQ-MyB.js';
+import '../ScrollContainer-eFomK67V.js';
+import '../InlineText-BkyswQUs.js';
+import '../AssociationProperty-CbYQYTIs.js';
+import '../Atlas_Core.OCH_UpdateUserLanguage-D1c3OWfm.js';
+import '../index-C5TcTlPR.js';
+import '../FormGroup-CpbXbBQG.js';
+import '../WebStaticImageProperty-DnG6CWYP.js';
+import '../Combobox-nz5rT0V2.js';
+import '../Fragment-CIZB4BT5.js';
 
 const AssociationMetaDataProperty = asProperty((config) => {
   const { id, filterable } = listAssociationMetaData(config);
@@ -1007,28 +1007,40 @@ const region$Main = (historyId) => /* @__PURE__ */ React.createElement(PageFragm
                                             }
                                           ),
                                           /* @__PURE__ */ React.createElement(
-                                            $ActionButton,
+                                            $ConditionalVisibilityWrapper,
                                             {
-                                              key: "p.Administration.Account_Overview.actionButton4",
-                                              $widgetId: "p.Administration.Account_Overview.actionButton4",
-                                              buttonId: "p.Administration.Account_Overview.actionButton4",
-                                              class: "mx-name-actionButton4 btn-lg spacing-outer-left-medium",
-                                              renderType: "link",
-                                              role: "button",
-                                              buttonClass: "btn-default",
-                                              caption: ExpressionProperty({
-                                                "expression": { "expr": { "type": "literal", "value": "" }, "args": {} }
+                                              key: "p.Administration.Account_Overview.actionButton4$visibility",
+                                              $widgetId: "p.Administration.Account_Overview.actionButton4$visibility",
+                                              visible: ExpressionProperty({
+                                                "expression": { "expr": { "type": "function", "name": "_hasSomeRole", "parameters": [{ "type": "literal", "value": "Administrator" }] }, "args": {} }
                                               }),
-                                              tooltip: TextProperty({
-                                                "value": ""
-                                              }),
-                                              icon: WebIconProperty({
-                                                "icon": { "type": "icon", "iconClass": "mx-icon-filled mx-icon-trash-can" }
-                                              }),
-                                              action: ActionProperty({
-                                                "action": { "type": "deleteObject", "argMap": { "$object": { "widget": "p.Administration.Account_Overview.dataGrid21", "source": "object" } }, "config": { "closePage": false, "operationId": "txr/hpXXh1+4WrqXhH4sjQ" }, "disabledDuringExecution": true },
-                                                "abortOnServerValidation": true
-                                              })
+                                              contents: [
+                                                /* @__PURE__ */ React.createElement(
+                                                  $ActionButton,
+                                                  {
+                                                    key: "p.Administration.Account_Overview.actionButton4",
+                                                    $widgetId: "p.Administration.Account_Overview.actionButton4",
+                                                    buttonId: "p.Administration.Account_Overview.actionButton4",
+                                                    class: "mx-name-actionButton4 btn-lg spacing-outer-left-medium",
+                                                    renderType: "link",
+                                                    role: "button",
+                                                    buttonClass: "btn-default",
+                                                    caption: ExpressionProperty({
+                                                      "expression": { "expr": { "type": "literal", "value": "" }, "args": {} }
+                                                    }),
+                                                    tooltip: TextProperty({
+                                                      "value": ""
+                                                    }),
+                                                    icon: WebIconProperty({
+                                                      "icon": { "type": "icon", "iconClass": "mx-icon-filled mx-icon-trash-can" }
+                                                    }),
+                                                    action: ActionProperty({
+                                                      "action": { "type": "deleteObject", "argMap": { "$object": { "widget": "p.Administration.Account_Overview.dataGrid21", "source": "object" } }, "config": { "closePage": false, "operationId": "txr/hpXXh1+4WrqXhH4sjQ" }, "disabledDuringExecution": true },
+                                                      "abortOnServerValidation": true
+                                                    })
+                                                  }
+                                                )
+                                              ]
                                             }
                                           )
                                         ]

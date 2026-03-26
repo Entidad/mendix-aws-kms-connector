@@ -9,8 +9,8 @@
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>AWS KMS Connector for Mendix</name>
-    <description>A Mendix connector module for AWS Key Management Service (KMS) operations</description>
+    <name>AWS KMS Client for Java</name>
+    <description>A Java client for AWS Key Management Service (KMS) operations</description>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

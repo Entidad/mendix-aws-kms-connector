@@ -5,7 +5,7 @@
 ### Step 1: Build the Module (2 minutes)
 
 ```bash
-cd sdk/java/
+cd resources/sdk/java/
 export MAVEN_HOME="$HOME/maven/apache-maven-3.9.6" && "$MAVEN_HOME/bin/mvn" clean install -DskipTests
 ``
 

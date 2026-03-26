@@ -1,34 +1,34 @@
-import { reactExports, asPluginWidgets, Fragment, selectTranslation } from '../index-FQlVOlYf.js';
-import { PageFragment, ExpressionProperty } from '../Placeholder-DFcDqEIU.js';
-import { ActionButton, TextProperty, ActionProperty } from '../ActionButton-dEkVZjqk.js';
-import { AssociationObjectProperty } from '../AssociationObjectProperty-B5BaoQn4.js';
-import '../F-L0MxFU-CUzh3jjv.js';
-import { AttributeProperty, DerivedUniqueIdProperty } from '../DerivedUniqueIdProperty-CMoZmJLZ.js';
-import { FormGroup, ValidationProperty } from '../FormGroup-D4kp91rN.js';
-import { WebIconProperty } from '../WebIconProperty-znHzcziz.js';
-import { CheckBox } from '../CheckBox-3a16XFTn.js';
-import { ComboboxWidgetModule } from '../Combobox-CTuBdCKm.js';
-import { ConditionalVisibilityWrapper } from '../ConditionalVisibilityWrapper--KfmbLq-.js';
-import { Container } from '../Image-C3uz38Dk.js';
-import { DataView } from '../DataView-Dip00PtH.js';
-import { Div } from '../Div-o8iece77.js';
-import '../Fragment-686zUVRb.js';
-import { Text } from '../Text-DuQAvxSA.js';
-import { TextBox } from '../TextBox-Defpuaw0.js';
-import { content as content$1 } from '../Atlas_Core.Atlas_Default-Cr51Glyx.js';
-import '../index-D_nCuE-Y.js';
-import '../InlineText-BmGDgYXy.js';
-import '../AssociationProperty-WAySTpZ7.js';
-import '../ListAttributeProperty-CXLDrwR-.js';
-import '../Atlas_Core.OCH_UpdateUserLanguage-CYtkbF7W.js';
-import '../index-fpKsB4fe.js';
-import '../CJS8msnl-qQy3fsQc.js';
-import '../ScrollContainer-_UwHUp6v.js';
-import '../WebStaticImageProperty-BHhgotvB.js';
+import { reactExports, asPluginWidgets, Fragment, selectTranslation } from '../index-Zvs2JQW8.js';
+import { PageFragment, ExpressionProperty } from '../Placeholder-Bmj-Y64R.js';
+import { ActionButton, TextProperty, ActionProperty } from '../ActionButton-N00bQbXV.js';
+import { AssociationObjectProperty } from '../AssociationObjectProperty-CmxZ8zD0.js';
+import '../F-L0MxFU-JT_HvXZp.js';
+import { AttributeProperty, DerivedUniqueIdProperty } from '../DerivedUniqueIdProperty-BRq0bBYj.js';
+import { FormGroup, ValidationProperty } from '../FormGroup-CpbXbBQG.js';
+import { WebIconProperty } from '../WebIconProperty-CknoYWS-.js';
+import { CheckBox } from '../CheckBox-XJcmBLS9.js';
+import { ComboboxWidgetModule } from '../Combobox-nz5rT0V2.js';
+import { ConditionalVisibilityWrapper } from '../ConditionalVisibilityWrapper-CWN6xH5D.js';
+import { Container } from '../Image-DjJe8vjt.js';
+import { DataView } from '../DataView-BVzZhbt7.js';
+import { Div } from '../Div-CljrUJND.js';
+import '../Fragment-CIZB4BT5.js';
+import { Text } from '../Text-CVL0TijG.js';
+import { TextBox } from '../TextBox-CL-vBg5S.js';
+import { content as content$1 } from '../Atlas_Core.Atlas_Default-kftgGv_S.js';
+import '../index-CRhQ-MyB.js';
+import '../InlineText-BkyswQUs.js';
+import '../AssociationProperty-CbYQYTIs.js';
+import '../ListAttributeProperty--Cc-W_Q0.js';
+import '../Atlas_Core.OCH_UpdateUserLanguage-D1c3OWfm.js';
+import '../index-C5TcTlPR.js';
+import '../CJS8msnl-D5R4ffv1.js';
+import '../ScrollContainer-eFomK67V.js';
+import '../WebStaticImageProperty-DnG6CWYP.js';
 
 const React = { createElement: reactExports.createElement };
 const Combobox = Object.getOwnPropertyDescriptor(ComboboxWidgetModule, "Combobox")?.value || Object.getOwnPropertyDescriptor(ComboboxWidgetModule, "default")?.value;
-const { $Div, $ActionButton, $DataView, $Fragment, $FormGroup, $CheckBox, $Text, $ConditionalVisibilityWrapper, $Container, $TextBox, $Combobox } = asPluginWidgets({ Div, ActionButton, DataView, Fragment, FormGroup, CheckBox, Text, ConditionalVisibilityWrapper, Container, TextBox, Combobox });
+const { $Div, $Container, $ConditionalVisibilityWrapper, $ActionButton, $DataView, $Fragment, $FormGroup, $CheckBox, $Text, $TextBox, $Combobox } = asPluginWidgets({ Div, Container, ConditionalVisibilityWrapper, ActionButton, DataView, Fragment, FormGroup, CheckBox, Text, TextBox, Combobox });
 const region$Main = (historyId) => /* @__PURE__ */ React.createElement(PageFragment, { renderKey: historyId }, [
   /* @__PURE__ */ React.createElement(
     $Div,
@@ -49,34 +49,91 @@ const region$Main = (historyId) => /* @__PURE__ */ React.createElement(PageFragm
                 {
                   key: "p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row0$column0",
                   $widgetId: "p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row0$column0",
-                  class: "col-lg col-md col",
+                  class: "col-lg-9 col-md col",
                   content: [
                     /* @__PURE__ */ React.createElement(
-                      $ActionButton,
+                      $Container,
                       {
-                        key: "p.AWSKMSConnector.AWS_KMS_Credentials.actionButton1",
-                        $widgetId: "p.AWSKMSConnector.AWS_KMS_Credentials.actionButton1",
-                        buttonId: "p.AWSKMSConnector.AWS_KMS_Credentials.actionButton1",
-                        class: "mx-name-actionButton1 pull-right spacing-outer-bottom-medium",
-                        renderType: "link",
-                        role: "button",
-                        buttonClass: "btn-default",
-                        caption: ExpressionProperty({
-                          "expression": { "expr": { "type": "literal", "value": "Close page" }, "args": {} }
-                        }),
-                        tooltip: TextProperty({
-                          "value": ""
-                        }),
-                        icon: WebIconProperty({
-                          "icon": { "type": "glyph", "iconClass": "glyphicon-eye-close" }
-                        }),
-                        action: ActionProperty({
-                          "action": { "type": "closePage", "argMap": {}, "config": {}, "disabledDuringExecution": true },
-                          "abortOnServerValidation": true
-                        })
+                        key: "p.AWSKMSConnector.AWS_KMS_Credentials.container1",
+                        $widgetId: "p.AWSKMSConnector.AWS_KMS_Credentials.container1",
+                        class: "mx-name-container1 pull-right spacing-outer-bottom-medium",
+                        renderMode: "div",
+                        content: [
+                          /* @__PURE__ */ React.createElement(
+                            $ConditionalVisibilityWrapper,
+                            {
+                              key: "p.AWSKMSConnector.AWS_KMS_Credentials.actionButton2$visibility",
+                              $widgetId: "p.AWSKMSConnector.AWS_KMS_Credentials.actionButton2$visibility",
+                              visible: ExpressionProperty({
+                                "expression": { "expr": { "type": "conditional", "condition": { "type": "function", "name": "_hasSomeRole", "parameters": [{ "type": "literal", "value": "Administrator" }] }, "then": { "type": "variable", "variable": "AWSKMSCredentialHelper", "path": "IsActive" }, "else": { "type": "literal", "value": false } }, "args": { "AWSKMSCredentialHelper": { "widget": "$AWSKMSCredentialHelper", "source": "object" } } }
+                              }),
+                              contents: [
+                                /* @__PURE__ */ React.createElement(
+                                  $ActionButton,
+                                  {
+                                    key: "p.AWSKMSConnector.AWS_KMS_Credentials.actionButton2",
+                                    $widgetId: "p.AWSKMSConnector.AWS_KMS_Credentials.actionButton2",
+                                    buttonId: "p.AWSKMSConnector.AWS_KMS_Credentials.actionButton2",
+                                    class: "mx-name-actionButton2 spacing-outer-right-medium",
+                                    renderType: "link",
+                                    role: "button",
+                                    buttonClass: "btn-default",
+                                    caption: ExpressionProperty({
+                                      "expression": { "expr": { "type": "literal", "value": "Create key" }, "args": {} }
+                                    }),
+                                    tooltip: TextProperty({
+                                      "value": ""
+                                    }),
+                                    icon: WebIconProperty({
+                                      "icon": { "type": "glyph", "iconClass": "glyphicon-plus" }
+                                    }),
+                                    action: ActionProperty({
+                                      "action": { "type": "callMicroflow", "argMap": { "AWSKMSCredentialHelper": { "widget": "$AWSKMSCredentialHelper", "source": "object" } }, "config": { "operationId": "v5qElsC7UlSz1zJ5/WeIlQ", "validate": "view", "allowedRoles": ["Administrator"] }, "disabledDuringExecution": true },
+                                      "abortOnServerValidation": true
+                                    })
+                                  }
+                                )
+                              ]
+                            }
+                          ),
+                          /* @__PURE__ */ React.createElement(
+                            $ActionButton,
+                            {
+                              key: "p.AWSKMSConnector.AWS_KMS_Credentials.actionButton1",
+                              $widgetId: "p.AWSKMSConnector.AWS_KMS_Credentials.actionButton1",
+                              buttonId: "p.AWSKMSConnector.AWS_KMS_Credentials.actionButton1",
+                              class: "mx-name-actionButton1 spacing-outer-right-medium",
+                              renderType: "link",
+                              role: "button",
+                              buttonClass: "btn-default",
+                              caption: ExpressionProperty({
+                                "expression": { "expr": { "type": "literal", "value": "Close page" }, "args": {} }
+                              }),
+                              tooltip: TextProperty({
+                                "value": ""
+                              }),
+                              icon: WebIconProperty({
+                                "icon": { "type": "glyph", "iconClass": "glyphicon-eye-close" }
+                              }),
+                              action: ActionProperty({
+                                "action": { "type": "closePage", "argMap": {}, "config": {}, "disabledDuringExecution": true },
+                                "abortOnServerValidation": true
+                              })
+                            }
+                          )
+                        ],
+                        ariaHidden: false
                       }
                     )
                   ]
+                }
+              ),
+              /* @__PURE__ */ React.createElement(
+                $Div,
+                {
+                  key: "p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row0$column1",
+                  $widgetId: "p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row0$column1",
+                  class: "col-lg-3 col-md col"
                 }
               )
             ]
@@ -94,7 +151,7 @@ const region$Main = (historyId) => /* @__PURE__ */ React.createElement(PageFragm
                 {
                   key: "p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row1$column0",
                   $widgetId: "p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row1$column0",
-                  class: "col-lg col-md col",
+                  class: "col-lg-9 col-md col",
                   content: [
                     /* @__PURE__ */ React.createElement(
                       $DataView,
@@ -103,7 +160,7 @@ const region$Main = (historyId) => /* @__PURE__ */ React.createElement(PageFragm
                         $widgetId: "p.AWSKMSConnector.AWS_KMS_Credentials.dataView1",
                         class: "mx-name-dataView1 form-vertical",
                         object: AssociationObjectProperty({
-                          "dataSourceId": "p.18",
+                          "dataSourceId": "p.25",
                           "scope": "$AWSKMSCredentialHelper",
                           "editable": true
                         }),
@@ -650,6 +707,14 @@ const region$Main = (historyId) => /* @__PURE__ */ React.createElement(PageFragm
                       }
                     )
                   ]
+                }
+              ),
+              /* @__PURE__ */ React.createElement(
+                $Div,
+                {
+                  key: "p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row1$column1",
+                  $widgetId: "p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row1$column1",
+                  class: "col-lg col-md col"
                 }
               )
             ]

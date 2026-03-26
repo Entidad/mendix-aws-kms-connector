@@ -1,8 +1,8 @@
-# AWS KMS Connector Module for Mendix
+# AWS KMS Client for Java
 
 ## Overview
 
-This is a comprehensive AWS Key Management Service (KMS) connector module for Mendix applications. It provides Java-based custom activities that enable secure cryptographic operations using AWS KMS, including key creation, encryption, decryption, and data key generation.
+This is a comprehensive AWS Key Management Service (KMS) java client compatible with Mendix applications. It provides Java-based custom classes that enable secure cryptographic operations using AWS KMS, including key creation, encryption, decryption, and data key generation.
 
 ## Features
 
@@ -16,7 +16,7 @@ This is a comprehensive AWS Key Management Service (KMS) connector module for Me
 ## Module Structure
 
 ```
-awskms/
+mendix-aws-kms-connector/resources/sdk/java/
 ├── src/main/java/
 │   └── awskms/
 │       ├── KmsConnectorService.java          # Core KMS service
@@ -43,8 +43,8 @@ awskms/
 ## Installation
 
 ### Prerequisites
-- Mendix Studio Pro (v9.0 or later)
-- Java 11 or higher
+- Mendix Studio Pro (v10.24.15 or later)
+- Java 21 or higher
 - Maven 3.6.0 or later
 - AWS Account with KMS access
 
@@ -55,6 +55,7 @@ awskms/
 
 2. **Build with Maven**
    ```bash
+   cd resources/sdk/java/
    mvn clean install
    ```
 
@@ -75,15 +76,15 @@ awskms/
 // Call the CreateCustomerManagedKey Java action with:
 accessKey = "${AWS_ACCESS_KEY}"
 secretKey = "${AWS_SECRET_KEY}"
-region = "us-east-1"
-description = "Application Encryption Key"
+region = "us-west-1"
+description = "Application Symmetric Encryption Key"
 keyUsage = "ENCRYPT_DECRYPT"
 ```
 
 **Response Example:**
 ```
-keyId = "arn:aws:kms:us-east-1:123456789012:key/abcd1234-a123-b456-c789-123456789012"
-keyArn = "arn:aws:kms:us-east-1:123456789012:key/abcd1234-a123-b456-c789-123456789012"
+keyId = "arn:aws:kms:us-west-1:123456789012:key/abcd1234-a123-b456-c789-123456789012"
+keyArn = "arn:aws:kms:us-west-1:123456789012:key/abcd1234-a123-b456-c789-123456789012"
 success = true
 ```
 
@@ -94,15 +95,15 @@ success = true
 // Call the Encrypt Java action with:
 accessKey = "${AWS_ACCESS_KEY}"
 secretKey = "${AWS_SECRET_KEY}"
-region = "us-east-1"
-keyId = "arn:aws:kms:us-east-1:123456789012:key/abcd1234..."
+region = "us-west-1"
+keyId = "arn:aws:kms:us-west-1:123456789012:key/abcd1234..."
 plaintext = "Sensitive data to encrypt"
 ```
 
 **Response Example:**
 ```
 ciphertextBlob = "AQIDAHhYdv3s6Jz8vQ..." (base64 encoded)
-keyId = "arn:aws:kms:us-east-1:123456789012:key/..."
+keyId = "arn:aws:kms:us-west-1:123456789012:key/..."
 success = true
 ```
 
@@ -113,14 +114,14 @@ success = true
 // Call the Decrypt Java action with:
 accessKey = "${AWS_ACCESS_KEY}"
 secretKey = "${AWS_SECRET_KEY}"
-region = "us-east-1"
+region = "us-west-1"
 ciphertextBlob = "AQIDAHhYdv3s6Jz8vQ..." (from encryption)
 ```
 
 **Response Example:**
 ```
 plaintext = "Sensitive data to encrypt"
-keyId = "arn:aws:kms:us-east-1:123456789012:key/..."
+keyId = "arn:aws:kms:us-west-1:123456789012:key/..."
 success = true
 ```
 
@@ -132,7 +133,7 @@ success = true
 accessKey = "${AWS_ACCESS_KEY}"
 secretKey = "${AWS_SECRET_KEY}"
 region = "us-east-1"
-keyId = "arn:aws:kms:us-east-1:123456789012:key/abcd1234..."
+keyId = "arn:aws:kms:us-west-1:123456789012:key/abcd1234..."
 keySpec = "AES_256"
 ```
 
@@ -140,7 +141,7 @@ keySpec = "AES_256"
 ```
 plaintext = "nPlj4L+g/PkX4Q..." (base64 encoded, use for local encryption)
 encryptedDataKey = "AQIDAHhYdv3s6Jz8vQ..." (base64 encoded, store with data)
-keyId = "arn:aws:kms:us-east-1:123456789012:key/..."
+keyId = "arn:aws:kms:us-west-1:123456789012:key/..."
 success = true
 ```
 
@@ -270,8 +271,8 @@ if (response.success == false) {
 
 The module uses the following AWS SDK dependencies:
 
-- `software.amazon.awssdk:kms:2.25.0` - AWS KMS client library
-- `software.amazon.awssdk:sdk-core:2.25.0` - AWS SDK core library
+- `software.amazon.awssdk:kms:2.42.14` - AWS KMS client library
+- `software.amazon.awssdk:sdk-core:2.42.14` - AWS SDK core library
 
 See `pom.xml` for the complete dependency list.
 

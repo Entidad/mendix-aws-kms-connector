@@ -1,3 +1,28 @@
+# Mendix Studio Pro
+/*.launch
+/deployment/
+/packages/
+/releases/
+/.mendix-cache/
+/.classpath
+/.project
+/aws-kms-connector.mpr.bak
+/aws-kms-connector.mpr.lock
+/modeler-merge-marker
+/project-settings.user.json
+/javasource/*/proxies/
+/javasource/system/
+/**/node_modules/
+!/javascriptsource/**/node_modules/
+/nativemobile/builds/
+/vendorlib/temp/
+.DS_Store
+/.svn/
+/mprcontents/mprjournal*
+
+# AWS KMS Java Client SDK
+/resources/target/*
+
 # Compiled class file
 *.class
 

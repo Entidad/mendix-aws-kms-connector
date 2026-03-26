@@ -1,13 +1,13 @@
-import { reactExports, asPluginWidgets, selectTranslation } from '../index-FQlVOlYf.js';
-import { PageFragment, ExpressionProperty } from '../Placeholder-DFcDqEIU.js';
-import { WebStaticImageProperty } from '../WebStaticImageProperty-BHhgotvB.js';
-import { ImageWidgetModule, Container } from '../Image-C3uz38Dk.js';
-import { Div } from '../Div-o8iece77.js';
-import { Text } from '../Text-DuQAvxSA.js';
-import { content as content$1 } from '../Atlas_Core.PopupLayout-14iW8_Cd.js';
-import '../index-D_nCuE-Y.js';
-import '../InlineText-BmGDgYXy.js';
-import '../ScrollContainer-_UwHUp6v.js';
+import { reactExports, asPluginWidgets, selectTranslation } from '../index-Zvs2JQW8.js';
+import { PageFragment, ExpressionProperty } from '../Placeholder-Bmj-Y64R.js';
+import { WebStaticImageProperty } from '../WebStaticImageProperty-DnG6CWYP.js';
+import { ImageWidgetModule, Container } from '../Image-DjJe8vjt.js';
+import { Div } from '../Div-CljrUJND.js';
+import { Text } from '../Text-CVL0TijG.js';
+import { content as content$1 } from '../Atlas_Core.PopupLayout-Bs18kg1_.js';
+import '../index-CRhQ-MyB.js';
+import '../InlineText-BkyswQUs.js';
+import '../ScrollContainer-eFomK67V.js';
 
 const React = { createElement: reactExports.createElement };
 const Image = Object.getOwnPropertyDescriptor(ImageWidgetModule, "Image")?.value || Object.getOwnPropertyDescriptor(ImageWidgetModule, "default")?.value;

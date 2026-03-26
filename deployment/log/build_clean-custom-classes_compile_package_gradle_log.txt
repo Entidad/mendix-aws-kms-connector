@@ -1,8 +1,8 @@
 Initialized native services in: C:\Users\jorge\.gradle\native
 Initialized jansi services in: C:\Users\jorge\.gradle\native
 Received JVM installation metadata from 'C:\Program Files\Eclipse Adoptium\jdk-21.0.5.11-hotspot': {JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-21.0.5.11-hotspot, JAVA_VERSION=21.0.5, JAVA_VENDOR=Eclipse Adoptium, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=21.0.5+11-LTS, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=21.0.5+11-LTS, VM_VENDOR=Eclipse Adoptium, OS_ARCH=aarch64}
-The client will now receive all logging from the daemon (pid: 9084). The daemon log file: C:\Users\jorge\.gradle\daemon\8.5\daemon-9084.out.log
-Starting 17th build in daemon [uptime: 46 mins 21.922 secs, performance: 94%, GC rate: 0.00/s, heap usage: 2% of 512 MiB, non-heap usage: 21% of 384 MiB]
+The client will now receive all logging from the daemon (pid: 8248). The daemon log file: C:\Users\jorge\.gradle\daemon\8.5\daemon-8248.out.log
+Starting 6th build in daemon [uptime: 2 hrs 9 mins 53.224 secs, performance: 95%, GC rate: 0.00/s, heap usage: 1% of 512 MiB, non-heap usage: 24% of 384 MiB]
 Using 6 worker leases.
 Watching the file system is configured to be enabled if available
 File system watching is inactive
@@ -22,18 +22,18 @@ Selected primary task 'compile' from project :
 Selected primary task 'package' from project :
 Tasks to be executed: [task ':clean-custom-classes', task ':compile', task ':package']
 Tasks that were excluded: []
-Resolve mutations for :clean-custom-classes (Thread[#525,Execution worker,5,main]) started.
-:clean-custom-classes (Thread[#525,Execution worker,5,main]) started.
-destroyer locations for task group 0 (Thread[#524,included builds,5,main]) started.
-destroyer locations for task group 1 (Thread[#524,included builds,5,main]) started.
+Resolve mutations for :clean-custom-classes (Thread[#225,Execution worker,5,main]) started.
+:clean-custom-classes (Thread[#225,Execution worker,5,main]) started.
+destroyer locations for task group 0 (Thread[#224,included builds,5,main]) started.
+destroyer locations for task group 1 (Thread[#226,Execution worker Thread 2,5,main]) started.
 
 > Task :clean-custom-classes
 Caching disabled for task ':clean-custom-classes' because:
   Build cache is disabled
 Task ':clean-custom-classes' is not up-to-date because:
   Task has not declared any outputs despite executing actions.
-Resolve mutations for :compile (Thread[#524,included builds,5,main]) started.
-:compile (Thread[#524,included builds,5,main]) started.
+Resolve mutations for :compile (Thread[#225,Execution worker,5,main]) started.
+:compile (Thread[#225,Execution worker,5,main]) started.
 
 > Task :compile
 Caching disabled for task ':compile' because:
@@ -58,18 +58,21 @@ The input changes require a full rebuild for incremental task ':compile'.
 Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
 Compiling with toolchain 'C:\Program Files\Eclipse Adoptium\jdk-21.0.5.11-hotspot'.
 Compiling with JDK Java compiler API.
-Class dependency analysis for incremental compilation took 0.068 secs.
-Created classpath snapshot for incremental compilation in 0.007 secs.
-Resolve mutations for :package (Thread[#524,included builds,5,main]) started.
-:package (Thread[#524,included builds,5,main]) started.
+Class dependency analysis for incremental compilation took 0.098 secs.
+Created classpath snapshot for incremental compilation in 0.543 secs.
+Resolve mutations for :package (Thread[#225,Execution worker,5,main]) started.
+:package (Thread[#225,Execution worker,5,main]) started.
 
-> Task :package UP-TO-DATE
+> Task :package
 Caching disabled for task ':package' because:
   Build cache is disabled
-Skipping task ':package' as it is up-to-date.
+Task ':package' is not up-to-date because:
+  Input property 'rootSpec$1$1' file C:\Users\jorge\Documents\Workspaces\Claude-ws\mendix-aws-kms-connector\deployment\run\bin\awskmsconnector\proxies\KMSCredentialHelper$MemberNames.class has changed.
+  Input property 'rootSpec$1$1' file C:\Users\jorge\Documents\Workspaces\Claude-ws\mendix-aws-kms-connector\deployment\run\bin\awskmsconnector\proxies\KMSCredentialHelper.class has changed.
+  Input property 'rootSpec$1$1' file C:\Users\jorge\Documents\Workspaces\Claude-ws\mendix-aws-kms-connector\deployment\run\bin\awskmsconnector\proxies\microflows\Microflows.class has changed.
 
-BUILD SUCCESSFUL in 2s
-3 actionable tasks: 2 executed, 1 up-to-date
+BUILD SUCCESSFUL in 4s
+3 actionable tasks: 3 executed
 
 
 Note: Some input files use or override a deprecated API.

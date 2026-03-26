@@ -624,26 +624,33 @@ const region$Main = (historyId) => (<PageFragment renderKey={historyId}>{[
                                                                                 "abortOnServerValidation": true
                                                                             })} />
                                                                     ]} />,
-                                                                <$ActionButton key="p.Administration.Account_Overview.actionButton4"
-                                                                    $widgetId="p.Administration.Account_Overview.actionButton4"
-                                                                    buttonId={"p.Administration.Account_Overview.actionButton4"}
-                                                                    class={"mx-name-actionButton4 btn-lg spacing-outer-left-medium"}
-                                                                    renderType={"link"}
-                                                                    role={"button"}
-                                                                    buttonClass={"btn-default"}
-                                                                    caption={ExpressionProperty({
-                                                                        "expression": { "expr": { "type": "literal", "value": "" }, "args": {} }
+                                                                <$ConditionalVisibilityWrapper key="p.Administration.Account_Overview.actionButton4$visibility"
+                                                                    $widgetId="p.Administration.Account_Overview.actionButton4$visibility"
+                                                                    visible={ExpressionProperty({
+                                                                        "expression": { "expr": { "type": "function", "name": "_hasSomeRole", "parameters": [ { "type": "literal", "value": "Administrator" } ] }, "args": {} }
                                                                     })}
-                                                                    tooltip={TextProperty({
-                                                                        "value": ""
-                                                                    })}
-                                                                    icon={WebIconProperty({
-                                                                        "icon": { "type": "icon", "iconClass": "mx-icon-filled mx-icon-trash-can" }
-                                                                    })}
-                                                                    action={ActionProperty({
-                                                                        "action": { "type": "deleteObject", "argMap": { "$object": { "widget": "p.Administration.Account_Overview.dataGrid21", "source": "object" } }, "config": { "closePage": false, "operationId": "txr/hpXXh1+4WrqXhH4sjQ" }, "disabledDuringExecution": true },
-                                                                        "abortOnServerValidation": true
-                                                                    })} />
+                                                                    contents={[
+                                                                        <$ActionButton key="p.Administration.Account_Overview.actionButton4"
+                                                                            $widgetId="p.Administration.Account_Overview.actionButton4"
+                                                                            buttonId={"p.Administration.Account_Overview.actionButton4"}
+                                                                            class={"mx-name-actionButton4 btn-lg spacing-outer-left-medium"}
+                                                                            renderType={"link"}
+                                                                            role={"button"}
+                                                                            buttonClass={"btn-default"}
+                                                                            caption={ExpressionProperty({
+                                                                                "expression": { "expr": { "type": "literal", "value": "" }, "args": {} }
+                                                                            })}
+                                                                            tooltip={TextProperty({
+                                                                                "value": ""
+                                                                            })}
+                                                                            icon={WebIconProperty({
+                                                                                "icon": { "type": "icon", "iconClass": "mx-icon-filled mx-icon-trash-can" }
+                                                                            })}
+                                                                            action={ActionProperty({
+                                                                                "action": { "type": "deleteObject", "argMap": { "$object": { "widget": "p.Administration.Account_Overview.dataGrid21", "source": "object" } }, "config": { "closePage": false, "operationId": "txr/hpXXh1+4WrqXhH4sjQ" }, "disabledDuringExecution": true },
+                                                                                "abortOnServerValidation": true
+                                                                            })} />
+                                                                    ]} />
                                                             ]
                                                         }),
                                                         "dynamicText": undefined,

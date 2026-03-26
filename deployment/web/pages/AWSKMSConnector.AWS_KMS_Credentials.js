@@ -28,7 +28,7 @@ import { addEnumerations, asPluginWidgets, t } from "mendix";
 
 import { content as parentContent } from "../layouts/Atlas_Core.Atlas_Default.js";
 
-const { $Div, $ActionButton, $DataView, $Fragment, $FormGroup, $CheckBox, $Text, $ConditionalVisibilityWrapper, $Container, $TextBox, $Combobox } = asPluginWidgets({ Div, ActionButton, DataView, Fragment, FormGroup, CheckBox, Text, ConditionalVisibilityWrapper, Container, TextBox, Combobox });
+const { $Div, $Container, $ConditionalVisibilityWrapper, $ActionButton, $DataView, $Fragment, $FormGroup, $CheckBox, $Text, $TextBox, $Combobox } = asPluginWidgets({ Div, Container, ConditionalVisibilityWrapper, ActionButton, DataView, Fragment, FormGroup, CheckBox, Text, TextBox, Combobox });
 
 const region$Main = (historyId) => (<PageFragment renderKey={historyId}>{[
     <$Div key="p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2"
@@ -41,29 +41,66 @@ const region$Main = (historyId) => (<PageFragment renderKey={historyId}>{[
                 content={[
                     <$Div key="p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row0$column0"
                         $widgetId="p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row0$column0"
-                        class={"col-lg col-md col"}
+                        class={"col-lg-9 col-md col"}
                         content={[
-                            <$ActionButton key="p.AWSKMSConnector.AWS_KMS_Credentials.actionButton1"
-                                $widgetId="p.AWSKMSConnector.AWS_KMS_Credentials.actionButton1"
-                                buttonId={"p.AWSKMSConnector.AWS_KMS_Credentials.actionButton1"}
-                                class={"mx-name-actionButton1 pull-right spacing-outer-bottom-medium"}
-                                renderType={"link"}
-                                role={"button"}
-                                buttonClass={"btn-default"}
-                                caption={ExpressionProperty({
-                                    "expression": { "expr": { "type": "literal", "value": "Close page" }, "args": {} }
-                                })}
-                                tooltip={TextProperty({
-                                    "value": ""
-                                })}
-                                icon={WebIconProperty({
-                                    "icon": { "type": "glyph", "iconClass": "glyphicon-eye-close" }
-                                })}
-                                action={ActionProperty({
-                                    "action": { "type": "closePage", "argMap": {}, "config": {}, "disabledDuringExecution": true },
-                                    "abortOnServerValidation": true
-                                })} />
-                        ]} />
+                            <$Container key="p.AWSKMSConnector.AWS_KMS_Credentials.container1"
+                                $widgetId="p.AWSKMSConnector.AWS_KMS_Credentials.container1"
+                                class={"mx-name-container1 pull-right spacing-outer-bottom-medium"}
+                                renderMode={"div"}
+                                content={[
+                                    <$ConditionalVisibilityWrapper key="p.AWSKMSConnector.AWS_KMS_Credentials.actionButton2$visibility"
+                                        $widgetId="p.AWSKMSConnector.AWS_KMS_Credentials.actionButton2$visibility"
+                                        visible={ExpressionProperty({
+                                            "expression": { "expr": { "type": "conditional", "condition": { "type": "function", "name": "_hasSomeRole", "parameters": [ { "type": "literal", "value": "Administrator" } ] }, "then": { "type": "variable", "variable": "AWSKMSCredentialHelper", "path": "IsActive" }, "else": { "type": "literal", "value": false } }, "args": { "AWSKMSCredentialHelper": { "widget": "$AWSKMSCredentialHelper", "source": "object" } } }
+                                        })}
+                                        contents={[
+                                            <$ActionButton key="p.AWSKMSConnector.AWS_KMS_Credentials.actionButton2"
+                                                $widgetId="p.AWSKMSConnector.AWS_KMS_Credentials.actionButton2"
+                                                buttonId={"p.AWSKMSConnector.AWS_KMS_Credentials.actionButton2"}
+                                                class={"mx-name-actionButton2 spacing-outer-right-medium"}
+                                                renderType={"link"}
+                                                role={"button"}
+                                                buttonClass={"btn-default"}
+                                                caption={ExpressionProperty({
+                                                    "expression": { "expr": { "type": "literal", "value": "Create key" }, "args": {} }
+                                                })}
+                                                tooltip={TextProperty({
+                                                    "value": ""
+                                                })}
+                                                icon={WebIconProperty({
+                                                    "icon": { "type": "glyph", "iconClass": "glyphicon-plus" }
+                                                })}
+                                                action={ActionProperty({
+                                                    "action": { "type": "callMicroflow", "argMap": { "AWSKMSCredentialHelper": { "widget": "$AWSKMSCredentialHelper", "source": "object" } }, "config": { "operationId": "v5qElsC7UlSz1zJ5/WeIlQ", "validate": "view", "allowedRoles": [ "Administrator" ] }, "disabledDuringExecution": true },
+                                                    "abortOnServerValidation": true
+                                                })} />
+                                        ]} />,
+                                    <$ActionButton key="p.AWSKMSConnector.AWS_KMS_Credentials.actionButton1"
+                                        $widgetId="p.AWSKMSConnector.AWS_KMS_Credentials.actionButton1"
+                                        buttonId={"p.AWSKMSConnector.AWS_KMS_Credentials.actionButton1"}
+                                        class={"mx-name-actionButton1 spacing-outer-right-medium"}
+                                        renderType={"link"}
+                                        role={"button"}
+                                        buttonClass={"btn-default"}
+                                        caption={ExpressionProperty({
+                                            "expression": { "expr": { "type": "literal", "value": "Close page" }, "args": {} }
+                                        })}
+                                        tooltip={TextProperty({
+                                            "value": ""
+                                        })}
+                                        icon={WebIconProperty({
+                                            "icon": { "type": "glyph", "iconClass": "glyphicon-eye-close" }
+                                        })}
+                                        action={ActionProperty({
+                                            "action": { "type": "closePage", "argMap": {}, "config": {}, "disabledDuringExecution": true },
+                                            "abortOnServerValidation": true
+                                        })} />
+                                ]}
+                                ariaHidden={false} />
+                        ]} />,
+                    <$Div key="p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row0$column1"
+                        $widgetId="p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row0$column1"
+                        class={"col-lg-3 col-md col"} />
                 ]} />,
             <$Div key="p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row1"
                 $widgetId="p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row1"
@@ -71,13 +108,13 @@ const region$Main = (historyId) => (<PageFragment renderKey={historyId}>{[
                 content={[
                     <$Div key="p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row1$column0"
                         $widgetId="p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row1$column0"
-                        class={"col-lg col-md col"}
+                        class={"col-lg-9 col-md col"}
                         content={[
                             <$DataView key="p.AWSKMSConnector.AWS_KMS_Credentials.dataView1"
                                 $widgetId="p.AWSKMSConnector.AWS_KMS_Credentials.dataView1"
                                 class={"mx-name-dataView1 form-vertical"}
                                 object={AssociationObjectProperty({
-                                    "dataSourceId": "p.18",
+                                    "dataSourceId": "p.25",
                                     "scope": "$AWSKMSCredentialHelper",
                                     "editable": true
                                 })}
@@ -466,7 +503,10 @@ const region$Main = (historyId) => (<PageFragment renderKey={historyId}>{[
                                         ]} />
                                 ]}
                                 hideFooter={true} />
-                        ]} />
+                        ]} />,
+                    <$Div key="p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row1$column1"
+                        $widgetId="p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row1$column1"
+                        class={"col-lg col-md col"} />
                 ]} />,
             <$Div key="p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row2"
                 $widgetId="p.AWSKMSConnector.AWS_KMS_Credentials.layoutGrid2$row2"

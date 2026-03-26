@@ -16,6 +16,25 @@ public final class Microflows
 	private Microflows() {}
 
 	// These are the microflows for the AWSKMSConnector module
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_KMS_CreateKeyBuilder(
+		awskmsconnector.proxies.KMSCredentialHelper _aWSKMSCredentialHelper
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("AWSKMSConnector.ACT_KMS_CreateKey");
+		builder = builder.withParam("AWSKMSCredentialHelper", _aWSKMSCredentialHelper);
+		return builder;
+	}
+
+	public static void aCT_KMS_CreateKey(
+		IContext context,
+		awskmsconnector.proxies.KMSCredentialHelper _aWSKMSCredentialHelper
+	)
+	{
+		aCT_KMS_CreateKeyBuilder(
+				_aWSKMSCredentialHelper
+			)
+			.execute(context);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_KMSCredentialHelper_SaveBuilder(
 		awskmsconnector.proxies.KMSCredentialHelper _kMSCredentialHelper
 	)

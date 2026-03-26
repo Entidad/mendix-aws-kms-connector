@@ -20,11 +20,13 @@ public class KMSCredentialHelper implements com.mendix.systemwideinterfaces.core
 	 */
 	public enum MemberNames
 	{
+		_ID("_ID"),
 		IsActive("IsActive"),
 		AccessKeyId("AccessKeyId"),
 		SecretAccessKey("SecretAccessKey"),
 		Region("Region"),
 		KeyId("KeyId"),
+		KeyDescription("KeyDescription"),
 		KMSCredentialHelper_KMSCredential("AWSKMSConnector.KMSCredentialHelper_KMSCredential");
 
 		private final java.lang.String metaName;
@@ -75,6 +77,42 @@ public class KMSCredentialHelper implements com.mendix.systemwideinterfaces.core
 	{
 		com.mendix.systemwideinterfaces.core.IMendixObject mendixObject = com.mendix.core.Core.retrieveId(context, mendixIdentifier);
 		return awskmsconnector.proxies.KMSCredentialHelper.initialize(context, mendixObject);
+	}
+
+	/**
+	 * @return value of _ID
+	 */
+	public final java.lang.String get_ID()
+	{
+		return get_ID(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of _ID
+	 */
+	public final java.lang.String get_ID(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames._ID.toString());
+	}
+
+	/**
+	 * Set value of _ID
+	 * @param _id
+	 */
+	public final void set_ID(java.lang.String _id)
+	{
+		set_ID(getContext(), _id);
+	}
+
+	/**
+	 * Set value of _ID
+	 * @param context
+	 * @param _id
+	 */
+	public final void set_ID(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String _id)
+	{
+		getMendixObject().setValue(context, MemberNames._ID.toString(), _id);
 	}
 
 	/**
@@ -264,6 +302,42 @@ public class KMSCredentialHelper implements com.mendix.systemwideinterfaces.core
 	public final void setKeyId(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String keyid)
 	{
 		getMendixObject().setValue(context, MemberNames.KeyId.toString(), keyid);
+	}
+
+	/**
+	 * @return value of KeyDescription
+	 */
+	public final java.lang.String getKeyDescription()
+	{
+		return getKeyDescription(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of KeyDescription
+	 */
+	public final java.lang.String getKeyDescription(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.KeyDescription.toString());
+	}
+
+	/**
+	 * Set value of KeyDescription
+	 * @param keydescription
+	 */
+	public final void setKeyDescription(java.lang.String keydescription)
+	{
+		setKeyDescription(getContext(), keydescription);
+	}
+
+	/**
+	 * Set value of KeyDescription
+	 * @param context
+	 * @param keydescription
+	 */
+	public final void setKeyDescription(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String keydescription)
+	{
+		getMendixObject().setValue(context, MemberNames.KeyDescription.toString(), keydescription);
 	}
 
 	/**
